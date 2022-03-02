@@ -29,6 +29,7 @@ $strength += ($password_len - $uppers_count) * 2; // uppers_count
 $strength += ($password_len - $lowers_count) * 2; // lowers_count
 ctype_alpha($password) ? $strength -= $password_len : null; // only letters
 ctype_digit($password) ? $strength -= $password_len : null; // only digits
+$strength -= $duplicate_symbols; // duplicate_symbols
 
 
 // Output
