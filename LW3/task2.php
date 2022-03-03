@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: text/plain");
-$identifier = $_GET['identifier'];
-if (is_string($identifier) && $identifier !== '')
+$identifier = isset($_GET['identifier']) ? $_GET['identifier'] : null;
+if ($identifier !== null)
 {
     if (ctype_alpha(substr($identifier, 0, 1)))
     {

@@ -1,9 +1,12 @@
 <?php
 header("Content-Type: text/plain");
-$text = trim($_GET['text']);
-while (strripos($text, '  '))
+$text = isset($_GET['text']) ? $_GET['text'] : null;
+if ($text !== null)
 {
-    $text = str_replace('  ', ' ', $text);
+    while (strripos($text, '  '))   
+    {
+        $text = str_replace('  ', ' ', $text);
+    }
 }
 echo $text
 ?>
