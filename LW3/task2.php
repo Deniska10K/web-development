@@ -19,4 +19,3 @@ if ($identifier !== null)
         echo "no\nstarts with digit";
     }
 }
-?>
